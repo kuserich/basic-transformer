@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from model.positional_encoding import PositionalEncoding
+from positional_encoding import PositionalEncoding
 
 class TransformerModel(nn.Module):
 

@@ -2,7 +2,7 @@ import math
 import torch
 import torchtext
 import torch.nn as nn
-from model.transformer import TransformerModel
+from transformer import TransformerModel
 from torchtext.data.utils import get_tokenizer
 
 TEXT = torchtext.data.Field(tokenize=get_tokenizer("basic_english"),
@@ -109,3 +109,9 @@ for epoch in range(1, epochs + 1):
         best_model = model
 
     scheduler.step()
+
+test_loss = evaluate(best_model, test_data)
+print('=' * 89)
+print('| End of training | test loss {:5.2f} | test ppl {:8.2f}'.format(
+    test_loss, math.exp(test_loss)))
+print('=' * 89)
