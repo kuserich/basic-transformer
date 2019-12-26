@@ -2,3 +2,4 @@
 venv
 venvs
 .data
+*__pycache__*
