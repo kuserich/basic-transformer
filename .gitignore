@@ -2,4 +2,7 @@
 venv
 venvs
 .data
-*__pycache__*
+model/__pycache__
+*.pyc
+__pycache__/
+__pycache__
